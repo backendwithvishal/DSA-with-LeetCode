@@ -30,3 +30,26 @@ var nextLargerNodes = function(head) {
   // Step 3: Anything left in stack has no next greater → stays 0 (already set)
   return answer;
 };
+
+/*
+1. Input:
+head = [2,1,5]
+
+Output:
+[5,5,0]
+
+Explanation:
+Step-by-step explanation
+
+values = [2,1,5]
+
+i = 0 → stack = [0]  
+i = 1 → stack = [0,1]  
+
+i = 2 → value = 5  
+→ 5 > 1 → answer[1] = 5  
+→ 5 > 2 → answer[0] = 5  
+→ stack = [2]  
+
+Final answer = [5,5,0]
+*/

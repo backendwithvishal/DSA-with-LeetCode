@@ -52,4 +52,27 @@ i = 2 → value = 5
 → stack = [2]  
 
 Final answer = [5,5,0]
+
+2. Input:
+head = [2,7,4,3,5]
+
+Output:
+[7,0,5,5,0]
+
+Explanation:
+Step-by-step explanation
+
+values = [2,7,4,3,5]
+
+i = 0 → stack = [0]  
+i = 1 → 7 > 2 → answer[0] = 7 → stack = [1]  
+i = 2 → stack = [1,2]  
+i = 3 → stack = [1,2,3]  
+i = 4 → 5 > 3 → answer[3] = 5  
+        5 > 4 → answer[2] = 5  
+        stack = [1,4]  
+
+Remaining indices (1,4) → no greater → 0  
+
+Final answer = [7,0,5,5,0]
 */

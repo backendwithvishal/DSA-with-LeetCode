@@ -75,4 +75,22 @@ i = 4 → 5 > 3 → answer[3] = 5
 Remaining indices (1,4) → no greater → 0  
 
 Final answer = [7,0,5,5,0]
+
+❌ wrong input & output
+
+3. Input:
+head = null
+
+Output:
+[]
+
+Explanation:
+
+values = []
+n = 0
+
+Loop does not run
+Return empty array []
+
+This is not a bug, but a valid edge case handled correctly
 */

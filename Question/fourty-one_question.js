@@ -40,3 +40,102 @@ class MyQueue {
     return this.inbox.length === 0 && this.outbox.length === 0;
   }
 }
+
+/*
+1. Operations:
+push(1)
+push(2)
+peek()
+pop()
+empty()
+
+Output:
+peek() → 1
+pop() → 1
+empty() → false
+
+Explanation:
+Step-by-step explanation
+
+Start:
+inbox = []
+outbox = []
+
+push(1)
+→ inbox = [1]
+
+push(2)
+→ inbox = [1, 2]
+
+peek()
+→ transfer → outbox = [2, 1], inbox = []
+→ return 1
+
+pop()
+→ outbox.pop() → 1
+→ outbox = [2]
+
+empty()
+→ false (since outbox has 2)
+
+
+2. Operations:
+push(10)
+push(20)
+push(30)
+pop()
+peek()
+
+Output:
+pop() → 10
+peek() → 20
+
+Explanation:
+Step-by-step explanation
+
+Start:
+inbox = []
+outbox = []
+
+push(10)
+→ inbox = [10]
+
+push(20)
+→ inbox = [10, 20]
+
+push(30)
+→ inbox = [10, 20, 30]
+
+pop()
+→ transfer → outbox = [30, 20, 10]
+→ pop → 10
+→ outbox = [30, 20]
+
+peek()
+→ return last element → 20
+
+
+❌ wrong input & output
+
+3. Operations:
+pop()
+peek()
+
+Output:
+undefined
+undefined
+
+Explanation:
+
+inbox = []
+outbox = []
+
+pop()
+→ transfer does nothing
+→ outbox.pop() → undefined
+
+peek()
+→ outbox[-1] → undefined
+
+This is not a bug, but an edge case when queue is empty.
+*/

@@ -46,3 +46,61 @@ function mergeTwoLists(l1, l2) {
 
   return dummy.next;
 }
+
+/*
+1. Input:
+lists = [
+  [1,4,5],
+  [1,3,4],
+  [2,6]
+]
+
+Output:
+[1,1,2,3,4,4,5,6]
+
+Explanation:
+Step-by-step explanation
+
+Round 1:
+merge [1,4,5] + [1,3,4] → [1,1,3,4,4,5]  
+merge [2,6] + null → [2,6]  
+
+lists becomes:
+[[1,1,3,4,4,5], [2,6]]
+
+Round 2:
+merge both → [1,1,2,3,4,4,5,6]
+
+Final answer = [1,1,2,3,4,4,5,6]
+
+
+2. Input:
+lists = []
+
+Output:
+null
+
+Explanation:
+
+lists.length = 0 → return null
+
+This is a valid edge case handled correctly.
+
+
+❌ wrong input & output
+
+3. Input:
+lists = [[], [1]]
+
+Output:
+[1]
+
+Explanation:
+
+First list is empty (null), second list = [1]
+
+mergeTwoLists(null, [1]) → [1]
+
+This is NOT a bug — handled correctly,
+but can be misunderstood as a failure case.
+*/

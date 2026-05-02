@@ -30,19 +30,19 @@ function mergeTwoLists(l1, l2) {
   let curr = dummy;
 
   // Pick the smaller head each time and advance that list
-  while (l1 !== null && l2 !== null) {
-    if (l1.val <= l2.val) {
-      curr.next = l1;
-      l1 = l1.next;
+  while (L1 !== null && L2 !== null) {
+    if (L1.val <= L2.val) {
+      curr.next = L1;
+      L1 = L1.next;
     } else {
-      curr.next = l2;
-      l2 = l2.next;
+      curr.next = L2;
+      L2 = L2.next;
     }
     curr = curr.next;
   }
 
   // Attach whichever list still has remaining nodes
-  curr.next = l1 !== null ? l1 : l2;
+  curr.next = L1 !== null ? L1 : L2;
 
   return dummy.next;
 }

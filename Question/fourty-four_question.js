@@ -25,7 +25,7 @@ var mergeKLists = function(lists) {
 
 
 // Classic merge two sorted linked lists — O(a + b)
-function mergeTwoLists(l1, l2) {
+function mergeTwoLists(L1, L2) {
   const dummy = { val: 0, next: null };
   let curr = dummy;
 

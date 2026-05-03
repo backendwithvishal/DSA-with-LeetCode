@@ -40,7 +40,7 @@ var reorderList = function (head) {
         first = nextFirst;              // advance first pointer
         second = nextSecond;            // advance second pointer
     }
-    // list is now reordered in-place ✅
+    // list is now reordered in-place 
 };
 
 /*

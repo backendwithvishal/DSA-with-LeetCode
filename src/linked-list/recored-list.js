@@ -42,3 +42,78 @@ var reorderList = function (head) {
     }
     // list is now reordered in-place ✅
 };
+
+/*
+1. Input:
+head = [1,2,3,4]
+
+Output:
+[1,4,2,3]
+
+Explanation:
+Step-by-step explanation
+
+Original:
+1 → 2 → 3 → 4
+
+Phase 1 (find middle):
+slow at 2
+
+Phase 2 (reverse second half):
+second half = 3 → 4 → becomes → 4 → 3
+
+Split:
+first = 1 → 2
+second = 4 → 3
+
+Phase 3 (merge):
+1 → 4 → 2 → 3
+
+Final answer = [1,4,2,3]
+
+
+2. Input:
+head = [1,2,3,4,5]
+
+Output:
+[1,5,2,4,3]
+
+Explanation:
+Step-by-step explanation
+
+Original:
+1 → 2 → 3 → 4 → 5
+
+Phase 1:
+slow at 3
+
+Phase 2:
+second half = 4 → 5 → becomes → 5 → 4
+
+Split:
+first = 1 → 2 → 3
+second = 5 → 4
+
+Phase 3:
+1 → 5 → 2 → 4 → 3
+
+Final answer = [1,5,2,4,3]
+
+
+❌ wrong input & output
+
+3. Input:
+head = null
+
+Output:
+null
+
+Explanation:
+
+Condition:
+if (!head || !head.next) return;
+
+So function exits immediately
+
+This is NOT a bug — it is a valid edge case handled correctly.
+*/

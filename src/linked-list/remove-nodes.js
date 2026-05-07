@@ -46,4 +46,22 @@ var removeNodes = function (head) {
    Explanation :-
        Each node is greater than everything to its right 
    output :- [10, 9, 8, 7]
+
+3. input :- head = [1, 2, 3, 4, 5]
+   Explanation :-
+       Each node has a greater node to its right, so only the last node (5) survives
+       Wait — 5 has nothing to its right, so it stays.
+       4 has 5 to its right → removed
+       3 has 5 to its right → removed
+       2 has 5 to its right → removed
+       1 has 5 to its right → removed
+   output :- [5]
+
+❌ Wrong input & output
+
+4. input :- head = [3, 1, 2]
+   Wrong output: [3, 2]   // ❌ 3 should be removed because 3 > 1 but NOT > 2... wait
+   Correct output: [3, 2]  // ✅ 3 stays (no node to its right is greater), 1 removed (2 > 1), 2 stays
+   
+   Wrong output: [1, 2, 3]  // ❌ sorted ascending — that's not what this problem does
 */

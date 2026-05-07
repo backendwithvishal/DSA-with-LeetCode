@@ -51,4 +51,24 @@ k = 2
 [1,2,1,2]
 
 output :- 7
+
+2. Input:  nums = [1, 2, 1, 3, 4], k = 3
+
+   Output: 3
+
+   Explanation: Subarrays with exactly 3 distinct: [1,2,1,3], [2,1,3], [1,3,4]
+
+3. Input:  nums = [1, 1, 1, 1], k = 1
+
+   Output: 10
+
+   Explanation: Every subarray has exactly 1 distinct number.
+   Subarrays of length 1: 4, length 2: 3, length 3: 2, length 4: 1 → total = 10
+
+❌ Wrong input & output
+
+4. Input:  nums = [1, 2, 3], k = 4
+
+   Wrong output: 1   // ❌ no subarray has 4 distinct values in a 3-element array
+   Correct output: 0  // ✅ k > array length → impossible
 */

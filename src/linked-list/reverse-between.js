@@ -28,100 +28,30 @@ var reverseBetween = function(head, left, right) {
 };
 
 /*
-1. Operations:
-push(1)
-push(2)
-peek()
-pop()
-empty()
+1. Input:  head = [1 → 2 → 3 → 4 → 5], left = 2, right = 4
 
-Output:
-peek() → 1
-pop() → 1
-empty() → false
+   Output: [1 → 4 → 3 → 2 → 5]
 
-Explanation:
-Step-by-step explanation
+   Explanation: Reverse nodes from position 2 to 4.
+   Before: 1 → [2 → 3 → 4] → 5
+   After:  1 → [4 → 3 → 2] → 5
 
-Start:
-inbox = []
-outbox = []
+2. Input:  head = [5], left = 1, right = 1
 
-push(1)
-→ inbox = [1]
+   Output: [5]
 
-push(2)
-→ inbox = [1, 2]
+   Explanation: Only one node, reversing a single node changes nothing.
 
-peek()
-→ transfer → outbox = [2, 1], inbox = []
-→ return 1
+3. Input:  head = [1 → 2 → 3 → 4 → 5], left = 1, right = 5
 
-pop()
-→ outbox.pop() → 1
-→ outbox = [2]
+   Output: [5 → 4 → 3 → 2 → 1]
 
-empty()
-→ false (since outbox has 2)
+   Explanation: Reverse the entire list (left = 1, right = last node).
 
+❌ Wrong input & output
 
-2. Operations:
-push(10)
-push(20)
-push(30)
-pop()
-peek()
+4. Input:  head = [1 → 2 → 3], left = 1, right = 2
 
-Output:
-pop() → 10
-peek() → 20
-
-Explanation:
-Step-by-step explanation
-
-Start:
-inbox = []
-outbox = []
-
-push(10)
-→ inbox = [10]
-
-push(20)
-→ inbox = [10, 20]
-
-push(30)
-→ inbox = [10, 20, 30]
-
-pop()
-→ transfer → outbox = [30, 20, 10]
-→ pop → 10
-→ outbox = [30, 20]
-
-peek()
-→ return last element → 20
-
-
-❌ wrong input & output
-
-3. Operations:
-pop()
-peek()
-
-Output:
-undefined
-undefined
-
-Explanation:
-
-inbox = []
-outbox = []
-
-pop()
-→ transfer does nothing
-→ outbox.pop() → undefined
-
-peek()
-→ outbox[-1] → undefined
-
-This is not a bug, but an edge case when queue is empty.
+   Wrong output: [3 → 2 → 1]   // ❌ reversed the whole list
+   Correct output: [2 → 1 → 3]  // ✅ only positions 1–2 are reversed
 */

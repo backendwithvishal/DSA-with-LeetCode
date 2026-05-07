@@ -25,3 +25,35 @@ var mergeTwoLists = function(list1, list2) {
   // dummy.next is the real head of the merged list
   return dummy.next;
 };
+
+/*
+1. Input:  list1 = [1 → 2 → 4]
+           list2 = [1 → 3 → 4]
+
+   Output: [1 → 1 → 2 → 3 → 4 → 4]
+
+   Explanation: Compare heads each time and pick the smaller one.
+   1 vs 1 → pick 1 (list1) → 2 vs 1 → pick 1 (list2) → 2 vs 3 → pick 2 → 4 vs 3 → pick 3 → 4 vs 4 → pick 4 (list1) → attach 4 (list2)
+
+2. Input:  list1 = [1 → 3 → 5]
+           list2 = [2 → 4 → 6]
+
+   Output: [1 → 2 → 3 → 4 → 5 → 6]
+
+   Explanation: Alternating picks — 1, 2, 3, 4, 5, 6
+
+3. Input:  list1 = []
+           list2 = [1 → 2]
+
+   Output: [1 → 2]
+
+   Explanation: list1 is null, while loop never runs, curr.next = list2 directly
+
+❌ Wrong input & output
+
+4. Input:  list1 = [2 → 4]
+           list2 = [1 → 3]
+
+   Wrong output: [2 → 1 → 4 → 3]   // ❌ not sorted — just alternating
+   Correct output: [1 → 2 → 3 → 4]  // ✅ always pick the smaller head
+*/

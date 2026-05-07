@@ -33,3 +33,32 @@ var rotateRight = function(head, k) {
 
   return newHead;
 };
+
+/*
+1. Input:  head = [1 → 2 → 3 → 4 → 5], k = 2
+
+   Output: [4 → 5 → 1 → 2 → 3]
+
+   Explanation: n = 5, effectiveK = 2 % 5 = 2.
+   Last 2 nodes [4,5] move to the front.
+
+2. Input:  head = [0 → 1 → 2], k = 4
+
+   Output: [2 → 0 → 1]
+
+   Explanation: n = 3, effectiveK = 4 % 3 = 1.
+   Last 1 node [2] moves to the front.
+
+3. Input:  head = [1 → 2 → 3], k = 3
+
+   Output: [1 → 2 → 3]
+
+   Explanation: effectiveK = 3 % 3 = 0 → no rotation needed, list unchanged.
+
+❌ Wrong input & output
+
+4. Input:  head = [1 → 2 → 3 → 4], k = 2
+
+   Wrong output: [3 → 4 → 1 → 2]   // ✅ actually correct
+   Wrong output: [2 → 3 → 4 → 1]   // ❌ this is a LEFT rotation, not right
+*/

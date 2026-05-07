@@ -57,4 +57,23 @@ function merge(L1, L2) {
 /*
 Input:  4 → 2 → 1 → 3
 Output: 1 → 2 → 3 → 4
+
+2. Input:  [-1 → 5 → 3 → 4 → 0]
+
+   Output: [-1 → 0 → 3 → 4 → 5]
+
+   Explanation: Merge sort splits, sorts, and merges halves recursively.
+
+3. Input:  [1]
+
+   Output: [1]
+
+   Explanation: Single node — base case returns immediately.
+
+❌ Wrong input & output
+
+4. Input:  [3 → 1 → 2]
+
+   Wrong output: [3 → 1 → 2]   // ❌ unsorted — sort was not applied
+   Correct output: [1 → 2 → 3]  // ✅ ascending order
 */

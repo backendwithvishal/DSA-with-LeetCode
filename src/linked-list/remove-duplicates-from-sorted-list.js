@@ -20,3 +20,30 @@ var deleteDuplicates = function(head) {
 
   return head; // head never changes in this problem
 };
+
+/*
+1. Input:  [1 → 1 → 2]
+
+   Output: [1 → 2]
+
+   Explanation: The second 1 is a duplicate and gets skipped.
+
+2. Input:  [1 → 1 → 2 → 3 → 3]
+
+   Output: [1 → 2 → 3]
+
+   Explanation: Both pairs of duplicates (1,1) and (3,3) are reduced to one each.
+
+3. Input:  [1 → 1 → 1]
+
+   Output: [1]
+
+   Explanation: All three are duplicates — only one node remains.
+
+❌ Wrong input & output
+
+4. Input:  [1 → 2 → 3]
+
+   Wrong output: [1 → 3]   // ❌ incorrectly removed 2 (not a duplicate)
+   Correct output: [1 → 2 → 3]  // ✅ no duplicates, list stays unchanged
+*/

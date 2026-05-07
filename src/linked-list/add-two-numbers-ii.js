@@ -38,101 +38,34 @@ var addTwoNumbers = function(l1, l2) {
 
   return head;
 };
-/**
-1. Operations:
-push(1)
-push(2)
-peek()
-pop()
-empty()
+/*
+1. Input:  l1 = [7 → 2 → 4 → 3]   // represents 7243
+           l2 = [5 → 6 → 4]        // represents 564
 
-Output:
-peek() → 1
-pop() → 1
-empty() → false
+   Output: [7 → 8 → 0 → 7]         // represents 7807
 
-Explanation:
-Step-by-step explanation
+   Explanation: 7243 + 564 = 7807
 
-Start:
-inbox = []
-outbox = []
+2. Input:  l1 = [2 → 4 → 3]        // represents 243
+           l2 = [5 → 6 → 4]        // represents 564
 
-push(1)
-→ inbox = [1]
+   Output: [8 → 0 → 7]             // represents 807
 
-push(2)
-→ inbox = [1, 2]
+   Explanation: 243 + 564 = 807
 
-peek()
-→ transfer → outbox = [2, 1], inbox = []
-→ return 1
+3. Input:  l1 = [9 → 9 → 9]        // represents 999
+           l2 = [1]                 // represents 1
 
-pop()
-→ outbox.pop() → 1
-→ outbox = [2]
+   Output: [1 → 0 → 0 → 0]         // represents 1000
 
-empty()
-→ false (since outbox has 2)
+   Explanation: 999 + 1 = 1000  (carry propagates all the way)
 
+❌ Wrong input & output
 
-2. Operations:
-push(10)
-push(20)
-push(30)
-pop()
-peek()
+4. Input:  l1 = [1 → 2 → 3]        // represents 123
+           l2 = [4 → 5 → 6]        // represents 456
 
-Output:
-pop() → 10
-peek() → 20
+   Output: [5 → 7 → 9]             // ✅ correct
 
-Explanation:
-Step-by-step explanation
-
-Start:
-inbox = []
-outbox = []
-
-push(10)
-→ inbox = [10]
-
-push(20)
-→ inbox = [10, 20]
-
-push(30)
-→ inbox = [10, 20, 30]
-
-pop()
-→ transfer → outbox = [30, 20, 10]
-→ pop → 10
-→ outbox = [30, 20]
-
-peek()
-→ return last element → 20
-
-
-❌ wrong input & output
-
-3. Operations:
-pop()
-peek()
-
-Output:
-undefined
-undefined
-
-Explanation:
-
-inbox = []
-outbox = []
-
-pop()
-→ transfer does nothing
-→ outbox.pop() → undefined
-
-peek()
-→ outbox[-1] → undefined
-
-This is not a bug, but an edge case when queue is empty.
- */
+   Wrong output: [9 → 7 → 5]       // ❌ digits reversed — result must stay in forward order
+*/

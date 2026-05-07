@@ -26,3 +26,30 @@ var swapPairs = function(head) {
 
   return dummy.next; // head may have changed — always return dummy.next
 };
+
+/*
+1. Input:  [1 → 2 → 3 → 4]
+
+   Output: [2 → 1 → 4 → 3]
+
+   Explanation: Pair (1,2) swapped → (2,1). Pair (3,4) swapped → (4,3).
+
+2. Input:  [1 → 2 → 3]
+
+   Output: [2 → 1 → 3]
+
+   Explanation: Pair (1,2) swapped. Node 3 has no pair — stays in place.
+
+3. Input:  [1]
+
+   Output: [1]
+
+   Explanation: Only one node, no pair to swap.
+
+❌ Wrong input & output
+
+4. Input:  [1 → 2 → 3 → 4 → 5 → 6]
+
+   Wrong output: [2 → 1 → 3 → 4 → 5 → 6]   // ❌ only first pair swapped
+   Correct output: [2 → 1 → 4 → 3 → 6 → 5]  // ✅ all pairs swapped
+*/

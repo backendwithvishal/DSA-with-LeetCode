@@ -34,7 +34,28 @@ function removeNthFromEnd(head, n) {
             n = 2
 output :- 1 → 2 → 3 → 5
 
+   Explanation: Remove the 2nd node from the end (which is 4).
+
 2. input :- head = 1 → 2
             n = 1
-output :- 1 
+output :- 1
+
+   Explanation: Remove the 1st node from the end (which is 2).
+
+3. input :- head = 1
+            n = 1
+output :- []
+
+   Explanation: Only one node, removing it leaves an empty list.
+                The dummy node handles this edge case — dummy.next = null.
+
+❌ Wrong input & output
+
+4. input :- head = 1 → 2 → 3
+            n = 3
+
+   Wrong output: [2 → 3]   // ❌ removed from the front, not 3rd from end
+   Correct output: [2 → 3]  // ✅ 3rd from end IS the first node (1), so this is actually correct
+
+   Wrong output: [1 → 2 → 3]  // ❌ nothing removed — n was not applied correctly
 */

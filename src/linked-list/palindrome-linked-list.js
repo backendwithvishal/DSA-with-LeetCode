@@ -49,4 +49,18 @@ function isPalindrome(head) {
     why out is false ??
     reson :- Forward: 1 2 3
              Backward: 3 2 1 (not same)
+
+3.  input :- 1 → 2 → 3 → 2 → 1
+    output :- true
+    reson :- Odd-length palindrome. Middle node (3) is the pivot.
+             Forward: 1 2 3 2 1
+             Backward: 1 2 3 2 1 (same)
+
+❌ Wrong input & output
+
+4.  input :- 1 → 2
+    output :- false
+
+    Wrong answer: true
+    Reason: 1 ≠ 2, so it is NOT a palindrome. Returning true would be incorrect.
 */

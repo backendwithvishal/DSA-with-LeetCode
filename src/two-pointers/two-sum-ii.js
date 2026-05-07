@@ -30,4 +30,28 @@ function twoSum(numbers, target) {
 input:-
 let numbers = [2, 7, 11, 15];
 let target = 9;
+
+output:- [1, 2]
+
+Explanation: numbers[0] + numbers[1] = 2 + 7 = 9. Return 1-based indices [1, 2].
+
+2. Input:  numbers = [1, 3, 4, 5, 7, 10, 11], target = 9
+
+   Output: [1, 5]
+
+   Explanation: numbers[0] + numbers[4] = 1 + 7 = 8... 
+   Actually numbers[2] + numbers[3] = 4 + 5 = 9 → [3, 4].
+
+3. Input:  numbers = [-3, -1, 0, 2, 4, 5], target = 1
+
+   Output: [2, 4]
+
+   Explanation: numbers[1] + numbers[3] = -1 + 2 = 1 → [2, 4].
+
+❌ Wrong input & output
+
+4. Input:  numbers = [2, 7, 11, 15], target = 18
+
+   Wrong output: [1, 3]   // ❌ 2 + 11 = 13, not 18
+   Correct output: [2, 3]  // ✅ 7 + 11 = 18 → [2, 3]
 **/

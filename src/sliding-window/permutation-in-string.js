@@ -45,7 +45,26 @@ function checkInclusion(s1, s2) {
              s2 = "eidbaooo"
     output :- true
 
+    Explanation: "bao" at index 3 is NOT an anagram. "oba" at index 3... 
+    Actually "ba" at index 3 is an anagram of "ab" → true.
+
  2. input :- s1 = "adc";
              s2 = "dcda"
     output :- true
+
+    Explanation: "dca" at index 1 is an anagram of "adc" → true.
+
+ 3. input :- s1 = "ab";
+             s2 = "a"
+    output :- false
+
+    Explanation: s1 is longer than s2 → early return false.
+
+❌ Wrong input & output
+
+ 4. input :- s1 = "abc";
+             s2 = "bbbca"
+
+    Wrong output: true   // ❌ "bbc" is not an anagram of "abc"
+    Correct output: false // ✅ no window in s2 is an anagram of "abc"
 */

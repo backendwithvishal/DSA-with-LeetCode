@@ -48,4 +48,24 @@ function checkPalindrome(s, left, right) {
 Input:  "deeee"
 Output: true
 Removed: d 
+
+2. Input:  "abca"
+
+   Output: true
+
+   Explanation: Remove 'c' → "aba" is a palindrome. Or remove 'b' → "aca" is a palindrome.
+
+3. Input:  "abc"
+
+   Output: false
+
+   Explanation: No single deletion makes it a palindrome.
+   Remove 'a' → "bc" ❌, remove 'b' → "ac" ❌, remove 'c' → "ab" ❌
+
+❌ Wrong input & output
+
+4. Input:  "raceacar"
+
+   Wrong output: true    // ❌ removing one char still doesn't make it a palindrome
+   Correct output: false  // ✅ "raceacar" needs more than one deletion
 */

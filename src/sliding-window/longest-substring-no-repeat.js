@@ -28,4 +28,15 @@ var lengthOfLongestSubstring = function(s) {
 2. input :- s = "bbbbb"
    output :- 1
    Explanation :- All characters are the same → longest substring is "b" → length = 1
+
+3. input :- s = "pwwkew"
+   output :- 3
+   Explanation :- Longest substring without repeats is "wke" → length = 3
+
+❌ Wrong input & output
+
+4. input :- s = "dvdf"
+
+   Wrong output: 2   // ❌ only counted "vd"
+   Correct output: 3  // ✅ "vdf" is the longest non-repeating substring
 */

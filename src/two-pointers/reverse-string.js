@@ -25,4 +25,15 @@ output :- ["o","l","l","e","h"]
 
 2 example :- input :- let s = ["H","a","n","n","a","h"];
 output :- ["h","a","n","n","a","H"]
+
+3. Input:  ["a"]
+   Output: ["a"]
+   Explanation: Single character — nothing to swap, stays the same.
+
+❌ Wrong input & output
+
+4. Input:  ["a","b","c"]
+
+   Wrong output: ["c","a","b"]   // ❌ rotated, not reversed
+   Correct output: ["c","b","a"]  // ✅ fully reversed
 */

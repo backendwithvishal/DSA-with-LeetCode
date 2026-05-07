@@ -44,10 +44,30 @@ function threeSum(nums) {
 
 /*
 input:- nums = [-1, 0, 1, 2, -1, -4]
-*/
 
-/*
 output :- [
   [-1, -1, 2],
   [-1, 0, 1]
- */
+]
+
+Explanation: Two unique triplets sum to zero.
+
+2. Input:  nums = [0, 0, 0]
+
+   Output: [[0, 0, 0]]
+
+   Explanation: Only one triplet — all zeros.
+
+3. Input:  nums = [1, 2, 3]
+
+   Output: []
+
+   Explanation: No three numbers sum to zero.
+
+❌ Wrong input & output
+
+4. Input:  nums = [-2, 0, 0, 2, 2]
+
+   Wrong output: [[-2,0,2],[-2,0,2]]   // ❌ duplicate triplets included
+   Correct output: [[-2,0,2]]           // ✅ duplicates skipped
+*/

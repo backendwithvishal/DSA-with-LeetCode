@@ -36,10 +36,29 @@ var pairSum = function(head) {
     return maxSum;
 };
 /*
-input :- 1 → 2 → 3 → 4
+1. input :- 1 → 2 → 3 → 4
 find middle :- slow → 3
 reverse second half :- 4 → 3
 compare :- 1 + 4 = 5
            2 + 3 = 5
 output :- 5
+
+2. input :- 5 → 4 → 2 → 1
+   reverse second half :- 1 → 2
+   compare :- 5 + 1 = 6
+              4 + 2 = 6
+   output :- 6
+
+3. input :- 1 → 100 → 2 → 200
+   reverse second half :- 200 → 2
+   compare :- 1 + 200 = 201
+              100 + 2 = 102
+   output :- 201
+
+❌ Wrong input & output
+
+4. input :- 1 → 2 → 3 → 4
+
+   Wrong output: 7   // ❌ 1+4=5, 2+3=5 — max is 5, not 7
+   Correct output: 5  // ✅ maximum twin sum is 5
 */

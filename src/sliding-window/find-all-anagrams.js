@@ -90,12 +90,16 @@ var findAnagrams = function (s, p) {
 
     output :- [0, 1, 2]
 
-    Expplantion :- Why that expectation is wrong?
-
-                  Because sliding window checks every continuous substring:
-
+    Explanation :- Every window of size 2 is "aa", which is an anagram of "aa".
                  "aa" → index 0 
                  "aa" → index 1 
-                 "aa" → index 2 
+                 "aa" → index 2
 
+❌ Wrong input & output
+
+4.  input :- s = "abcdef"
+             p = "xyz"
+
+    Wrong output: [0]   // ❌ "abc" is not an anagram of "xyz"
+    Correct output: []   // ✅ no window in s matches p
 */

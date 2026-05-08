@@ -66,14 +66,32 @@ function minWindow(s, t) {
        "BANC"
 
     Explanation:
-     "BANC" is the smallest substring of s that contains A, B, and C
+     "BANC" is the smallest substring of s that contains A, B, and C.
+     Other valid windows: "ADOBEC", "DOBECODEBA" — but "BANC" is shortest.
 
 2.  Input: 
         s = "a"
         t = "aa"
 
-    output: 
-        " "
+    Output: 
+        ""
     Explanation:
-     t needs 2 'a', but s has only 1
+     t needs 2 'a', but s has only 1 → no valid window exists → return "".
+
+3.  Input:
+        s = "aa"
+        t = "aa"
+
+    Output: "aa"
+
+    Explanation: The entire string is the minimum window containing both 'a's.
+
+❌ Wrong input & output
+
+4.  Input:
+        s = "ADOBECODEBANC"
+        t = "ABC"
+
+    Wrong output: "ADOBEC"   // ❌ valid but not the minimum window
+    Correct output: "BANC"    // ✅ shortest window containing A, B, and C
 */

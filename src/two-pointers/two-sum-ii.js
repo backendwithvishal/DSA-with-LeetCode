@@ -35,12 +35,11 @@ output:- [1, 2]
 
 Explanation: numbers[0] + numbers[1] = 2 + 7 = 9. Return 1-based indices [1, 2].
 
-2. Input:  numbers = [1, 3, 4, 5, 7, 10, 11], target = 9
+2. Input:  numbers = [2, 3, 4], target = 6
 
-   Output: [1, 5]
+   Output: [1, 3]
 
-   Explanation: numbers[0] + numbers[4] = 1 + 7 = 8... 
-   Actually numbers[2] + numbers[3] = 4 + 5 = 9 → [3, 4].
+   Explanation: numbers[0] + numbers[2] = 2 + 4 = 6 → [1, 3].
 
 3. Input:  numbers = [-3, -1, 0, 2, 4, 5], target = 1
 

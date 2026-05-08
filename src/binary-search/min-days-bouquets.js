@@ -56,7 +56,16 @@ input :- bloomDay = [1, 10, 3, 10, 2]
          k = 1
 output :- 3
 Explanation :- We need 3 bouquets, each with 1 flower.
-               So we just need 3 flowers that have bloomed.
+               On day 3: flowers at indices 0 (day 1), 2 (day 3), 4 (day 2) have bloomed.
+               That's 3 flowers → 3 bouquets of 1 each. ✅
+
+2. Input:  bloomDay = [1, 2, 4, 9, 3, 4, 1], m = 2, k = 2
+
+   Output: 4
+
+   Explanation: Need 2 bouquets × 2 adjacent flowers = 4 adjacent bloomed flowers.
+   On day 4: bloomed = [1,2,4,_,3,4,1] → positions 0,1,2 bloomed (3 adjacent) → 1 bouquet
+             positions 4,5,6 bloomed → 2 bouquets ✅
 
 // wrong & second input & output 
 
@@ -67,4 +76,12 @@ output :- -1
 Explanation :- Need 2 bouquets × 2 flowers each = 4 flowers
                But only 3 flowers exist
                So it's impossible, no matter how many days we wait.
+
+❌ Wrong input & output
+
+3. Input:  bloomDay = [7, 7, 7, 7, 12, 7, 7], m = 2, k = 3
+
+   Wrong output: 7    // ❌ on day 7, only 6 flowers bloom (not 7 adjacent in groups of 3)
+   Correct output: 12  // ✅ need 2 groups of 3 adjacent → positions 0-2 and 3-5 or 4-6
+                       // position 4 blooms on day 12, so day 12 is needed
 */

@@ -63,7 +63,24 @@ input :- nums = [1, 2, 2, 2, 3, 4, 5]
 target = 2
 output :- [1, 3]
 
+Explanation: First occurrence of 2 is at index 1, last is at index 3.
+
 input :- nums = [5, 7, 7, 8, 8, 10]
 target = 8
 output :- [3, 4]
+
+Explanation: 8 appears at indices 3 and 4.
+
+3. Input:  nums = [5, 7, 7, 8, 8, 10], target = 6
+
+   Output: [-1, -1]
+
+   Explanation: 6 is not in the array — both searches return -1.
+
+❌ Wrong input & output
+
+4. Input:  nums = [2, 2, 2, 2], target = 2
+
+   Wrong output: [0, 0]   // ❌ only found first, missed last
+   Correct output: [0, 3]  // ✅ 2 spans the entire array
 */

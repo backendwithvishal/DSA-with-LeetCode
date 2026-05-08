@@ -46,5 +46,27 @@ function search(nums, target) {
 input :- let nums = [4,5,6,7,0,1,2];
          let target = 0;
 
-output :- 4         
+output :- 4
+
+Explanation: The array was rotated. Left half [4,5,6,7] is sorted.
+Target 0 is not in [4,7], so search right half [0,1,2]. Found at index 4.
+
+2. Input:  nums = [4, 5, 6, 7, 0, 1, 2], target = 3
+
+   Output: -1
+
+   Explanation: 3 does not exist in the array.
+
+3. Input:  nums = [1], target = 0
+
+   Output: -1
+
+   Explanation: Single element array, 0 ≠ 1 → not found.
+
+❌ Wrong input & output
+
+4. Input:  nums = [5, 1, 3], target = 3
+
+   Wrong output: -1   // ❌ missed the target
+   Correct output: 2   // ✅ right half [1,3] is sorted, 3 is in range → found at index 2
 */

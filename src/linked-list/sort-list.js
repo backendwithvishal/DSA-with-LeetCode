@@ -55,8 +55,10 @@ function merge(L1, L2) {
 }
 
 /*
-Input:  4 → 2 → 1 → 3
-Output: 1 → 2 → 3 → 4
+1. Input:  4 → 2 → 1 → 3
+   Output: 1 → 2 → 3 → 4
+
+   Explanation: Merge sort splits into [4,2] and [1,3], sorts each → [2,4] and [1,3], then merges → [1,2,3,4].
 
 2. Input:  [-1 → 5 → 3 → 4 → 0]
 

@@ -46,4 +46,25 @@ function binarySearch(nums, target, findFirst) {
 input :- nums = [1, 2, 2, 2, 3, 4, 5]
         target = 2
 output :- [1, 3]
+
+Explanation: First occurrence of 2 is at index 1, last is at index 3.
+
+2. Input:  nums = [5, 7, 7, 8, 8, 10], target = 8
+
+   Output: [3, 4]
+
+   Explanation: 8 appears at indices 3 and 4.
+
+3. Input:  nums = [5, 7, 7, 8, 8, 10], target = 6
+
+   Output: [-1, -1]
+
+   Explanation: 6 does not exist in the array.
+
+❌ Wrong input & output
+
+4. Input:  nums = [1, 1, 1, 1], target = 1
+
+   Wrong output: [0, 0]   // ❌ only found first occurrence, missed last
+   Correct output: [0, 3]  // ✅ 1 appears from index 0 to 3
 */

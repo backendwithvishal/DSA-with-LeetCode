@@ -14,7 +14,7 @@ class MyLinkedList {
         this.size = 0;            // track total number of real nodes
     }
 
-    // ✅ GET: return value at index, or -1 if invalid
+    // GET: return value at index, or -1 if invalid
     get(index) {
         // invalid index check
         if (index < 0 || index >= this.size) return -1;
@@ -29,19 +29,19 @@ class MyLinkedList {
         return current.val;
     }
 
-    // ✅ ADD AT HEAD: insert before the first real node
+    // ADD AT HEAD: insert before the first real node
     addAtHead(val) {
         // same as addAtIndex at position 0
         this.addAtIndex(0, val);
     }
 
-    // ✅ ADD AT TAIL: insert after the last real node
+    // ADD AT TAIL: insert after the last real node
     addAtTail(val) {
         // same as addAtIndex at last position
         this.addAtIndex(this.size, val);
     }
 
-    // ✅ ADD AT INDEX: insert new node BEFORE position index
+    // ADD AT INDEX: insert new node BEFORE position index
     addAtIndex(index, val) {
         // if index > size, we can't insert
         if (index > this.size) return;
@@ -64,7 +64,7 @@ class MyLinkedList {
         this.size++;
     }
 
-    // ✅ DELETE AT INDEX: remove node at position index
+    // DELETE AT INDEX: remove node at position index
     deleteAtIndex(index) {
         // invalid index check
         if (index < 0 || index >= this.size) return;

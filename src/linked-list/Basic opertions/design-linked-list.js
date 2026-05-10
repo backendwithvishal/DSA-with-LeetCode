@@ -82,3 +82,6 @@ class MyLinkedList {
         this.size--;
     }
 }
+/*
+
+*/

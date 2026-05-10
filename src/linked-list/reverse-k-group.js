@@ -62,6 +62,6 @@ function reverseKGroup(head, k) {
 4.  input :- 1 → 2 → 3 → 4
         k = 3
 
-    Wrong output: [3 → 2 → 1 → 4] reversed all 4 nodes
-    Correct output: [3 → 2 → 1 → 4]  // ✅ first 3 reversed, last 1 node stays (< k)
+    Wrong output: [3 → 2 → 1 → 4 → 3 → 2 → 1]   // ❌ reversed all nodes including the remainder
+    Correct output: [3 → 2 → 1 → 4]               // ✅ only first group of 3 reversed, node 4 stays (< k)
 */

@@ -68,15 +68,19 @@ var maxDistance = function(position, m) {
 
 ❌ Wrong input and output 
 
-3. input: position = [1, 2, 8, 12, 17], m = 2
+3. input: position = [1, 2, 8, 12, 17], m = 3
    After sorting: [1, 2, 8, 12, 17]
-   output: 16
+   output: 6
    Explanation:
-   Again only 2 balls, so put one at each end.
-   Ball 1 → position 1 (leftmost)
-   Ball 2 → position 17 (rightmost)
-   Gap = 17 - 1 = 16
-   This is the maximum possible gap, so the answer is 16.
-   (Note: 1,000,000,000 - 1 from the previous example was a separate input,
-    not part of this one.)
+   Place 3 balls to maximize the minimum gap.
+   Best placement → balls at positions 1, 8, 17
+     gap between 1 and 8 = 7
+     gap between 8 and 17 = 9
+   Minimum gap = 7... but can we do better?
+   Try 1, 8, 12 → gaps 7 and 4 → min = 4 (worse)
+   Try 1, 2, 17 → gaps 1 and 15 → min = 1 (worse)
+   Best is 1, 8, 17 → min gap = 7
+
+   Wrong output: 16   // ❌ that would be placing only 2 balls (1 and 17), but m = 3
+   Correct output: 7   // ✅ with 3 balls, best minimum gap is 7
 */

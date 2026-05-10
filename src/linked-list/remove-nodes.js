@@ -60,8 +60,11 @@ var removeNodes = function (head) {
 ❌ Wrong input & output
 
 4. input :- head = [3, 1, 2]
-   Wrong output: [3, 2]   // ❌ 3 should be removed because 3 > 1 but NOT > 2... wait
-   Correct output: [3, 2]  // ✅ 3 stays (no node to its right is greater), 1 removed (2 > 1), 2 stays
-   
+
+   Node 3: nothing to its right is greater → stays
+   Node 1: 2 is to its right and 2 > 1 → removed
+   Node 2: nothing to its right → stays
+
    Wrong output: [1, 2, 3]  // ❌ sorted ascending — that's not what this problem does
+   Correct output: [3, 2]    // ✅ only nodes with no greater node to their right survive
 */

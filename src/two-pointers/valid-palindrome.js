@@ -49,5 +49,17 @@ var isPalindrome = function(s) {
                      ↑ mismatch at index 3
    Output: false
 
-   Wrong answer would be: true (Someone forgot to clean or compare correctly)
+4. Input: " "
+   Output: true
+   Reason: Empty string after cleaning → no characters to compare → trivially a palindrome.
+
+❌ Wrong input & output
+
+5. Input: "0P"
+   clean → "0p"
+   forward:  0 p
+   backward: p 0
+   Output: false
+
+   Wrong answer: true   // ❌ '0' ≠ 'p', so it is NOT a palindrome
 */

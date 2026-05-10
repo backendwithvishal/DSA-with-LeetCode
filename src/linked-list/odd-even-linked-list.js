@@ -52,7 +52,9 @@ Explanation: Odd-indexed nodes (1,3,5) come first, then even-indexed nodes (2,4)
 
 4. Input:  [1 → 2 → 3 → 4]
 
-   Wrong output: [1 → 3 → 2 → 4]   // ❌ only first pair swapped
-   Correct output: [1 → 3 → 2 → 4]  // ✅ actually correct for 4 nodes
-   (odd: 1,3 → even: 2,4)
+   Odd positions (1st, 3rd): values 1, 3
+   Even positions (2nd, 4th): values 2, 4
+
+   Wrong output: [1 → 2 → 3 → 4]   // ❌ nothing reordered
+   Correct output: [1 → 3 → 2 → 4]  // ✅ odd nodes first, then even nodes
 */

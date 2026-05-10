@@ -47,7 +47,8 @@ function checkPalindrome(s, left, right) {
 /* 
 Input:  "deeee"
 Output: true
-Removed: d 
+
+Explanation: Remove 'd' → "eeee" is a palindrome. ✅
 
 2. Input:  "abca"
 

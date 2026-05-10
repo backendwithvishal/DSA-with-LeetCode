@@ -45,8 +45,7 @@ function checkInclusion(s1, s2) {
              s2 = "eidbaooo"
     output :- true
 
-    Explanation: "bao" at index 3 is NOT an anagram. "oba" at index 3... 
-    Actually "ba" at index 3 is an anagram of "ab" → true.
+    Explanation: "ba" at index 3 in s2 is a permutation of "ab" → return true.
 
  2. input :- s1 = "adc";
              s2 = "dcda"

@@ -51,8 +51,26 @@ Split into: [7, 2, 5] → sum = 14
             [10, 8] → sum = 18
          Largest sum = 18 (minimum possible)
 
-// ❌ incorrect input and output
-// input:- nums = [1, -2, 3, 4]
-//         k = 2
-// output:- 3   (negative numbers are invalid for this problem)
+2. Input:  nums = [1, 2, 3, 4, 5], k = 2
+
+   Output: 9
+
+   Explanation:
+   Best split: [1,2,3] → sum = 6, [4,5] → sum = 9
+   Largest sum = 9 (minimum possible)
+
+3. Input:  nums = [1, 4, 4], k = 3
+
+   Output: 4
+
+   Explanation:
+   Split each element into its own subarray: [1], [4], [4]
+   Largest sum = 4 (minimum possible when k = n)
+
+❌ Wrong input & output
+
+4. Input:  nums = [1, -2, 3, 4], k = 2
+
+   Wrong output: 3   // ❌ negative numbers are invalid for this problem
+   Correct output: undefined  // ✅ this problem assumes all nums are non-negative integers
 */

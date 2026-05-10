@@ -35,10 +35,19 @@ src/
 │   └── magnetic-force-balls.js              (LC 1552) Magnetic Force Between Two Balls
 │
 ├── linked-list/
+│   ├── reverse-linked-list.js               (LC 206) Reverse Linked List
+│   ├── merge-two-sorted-lists.js            (LC 21)  Merge Two Sorted Lists
+│   ├── linked-list-cycle.js                 (LC 141) Linked List Cycle
+│   ├── linked-list-cycle-2.js               (LC 142) Linked List Cycle II
+│   ├── middle-linked-list.js                (LC 876) Middle of the Linked List
+│   ├── remove-duplicates-from-sorted-list.js (LC 83) Remove Duplicates from Sorted List
 │   ├── odd-even-linked-list.js              (LC 328) Odd Even Linked List
 │   ├── remove-nth-from-end.js               (LC 19)  Remove Nth Node From End of List
+│   ├── swap-nodes-in-pairs.js               (LC 24)  Swap Nodes in Pairs
 │   ├── reverse-k-group.js                   (LC 25)  Reverse Nodes in k-Group
+│   ├── rotate-list.js                       (LC 61)  Rotate List
 │   ├── palindrome-linked-list.js            (LC 234) Palindrome Linked List
+│   ├── reorder-list.js                      (LC 143) Reorder List
 │   ├── sort-list.js                         (LC 148) Sort List
 │   ├── max-twin-sum.js                      (LC 2130) Maximum Twin Sum of a Linked List
 │   ├── add-two-numbers.js                   (LC 2)   Add Two Numbers
@@ -77,7 +86,7 @@ src/
 | Two Pointers          | Two Sum II, 3Sum, Valid Palindrome I & II, Reverse String                |
 | Sliding Window        | K Distinct Subarrays, Permutation in String, Min Window Substring, Longest Substring, Find Anagrams |
 | Binary Search         | Classic, Rotated Array, First/Last Position, Peak Element, Min Rotated, Split Array, Bouquets, Magnetic Force |
-| Linked List           | Odd/Even, Remove Nth, Reverse k-Group, Palindrome, Sort, Twin Sum, Add Two Numbers I & II, Remove Nodes, Reverse Between, Next Larger, Merge K |
+| Linked List           | Reverse, Merge Two Sorted, Cycle I & II, Middle, Remove Duplicates, Odd/Even, Remove Nth, Swap Pairs, Reverse k-Group, Rotate, Palindrome, Reorder, Sort, Twin Sum, Add Two Numbers I & II, Remove Nodes, Reverse Between, Next Larger, Merge K |
 | Stack & Queue         | Next Greater II, Evaluate RPN, Stack via Queue, Custom Stack, Min Stack, Maximal Rectangle, Queue via Stacks |
 | Expand from Center    | Count Palindromic Substrings, Longest Palindromic Substring              |
 | Prefix Sum            | Subarray Sum Equals K                                                    |

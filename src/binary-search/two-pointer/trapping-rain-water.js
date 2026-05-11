@@ -1,4 +1,4 @@
-// 42 question on leetcode
+// 42 question number om leetcode
 
 function trap(height) {
     let left  = 0;                  // left pointer starts at beginning
@@ -10,10 +10,10 @@ function trap(height) {
     while (left < right) {
 
         if (height[left] <= height[right]) {
-            // left side is the bottleneck — process left pointer
+            // left side is the bottleneck process left pointer
 
             if (height[left] >= leftMax) {
-                leftMax = height[left]; // update left max — no water here, it's a wall
+                leftMax = height[left]; // update left max no water here it is a wall
             } else {
                 totalWater += leftMax - height[left]; // water trapped on top of this bar
             }
@@ -21,10 +21,10 @@ function trap(height) {
             left++; // move left pointer inward
 
         } else {
-            // right side is the bottleneck — process right pointer
+            // right side is the bottleneck process right pointer
 
             if (height[right] >= rightMax) {
-                rightMax = height[right]; // update right max — no water here, it's a wall
+                rightMax = height[right]; // update right max  no water here it is a wall
             } else {
                 totalWater += rightMax - height[right]; // water trapped on top of this bar
             }

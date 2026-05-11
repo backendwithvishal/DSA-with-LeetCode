@@ -1,9 +1,5 @@
 // 11 question on leetcode
 
-/**
- * @param {number[]} height
- * @return {number}
- */
 function maxArea(height) {
     let left  = 0;                   // left pointer starts at beginning
     let right = height.length - 1;   // right pointer starts at end

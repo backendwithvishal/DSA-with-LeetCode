@@ -35,3 +35,37 @@ function trap(height) {
 
     return totalWater;
 }
+
+/*
+1. Input:  height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+
+   Output: 6
+
+   Explanation: Water is trapped in the valleys between the bars.
+   Total trapped = 6 units.
+
+2. Input:  height = [4, 2, 0, 3, 2, 5]
+
+   Output: 9
+
+   Explanation:
+   Bar 1 (h=2): leftMax=4, rightMax=5 → trapped = 4-2 = 2
+   Bar 2 (h=0): leftMax=4, rightMax=5 → trapped = 4-0 = 4
+   Bar 3 (h=3): leftMax=4, rightMax=5 → trapped = 4-3 = 1
+   Bar 4 (h=2): leftMax=4, rightMax=5 → trapped = 4-2 = 2
+   Total = 2 + 4 + 1 + 2 = 9
+
+3. Input:  height = [3, 0, 3]
+
+   Output: 3
+
+   Explanation: Middle bar (h=0) is bounded by walls of height 3 on both sides.
+   Trapped = min(3,3) - 0 = 3.
+
+❌ Wrong input & output
+
+4. Input:  height = [1, 0, 1]
+
+   Wrong output: 0   // ❌ forgot to check both sides — middle bar can trap water
+   Correct output: 1  // ✅ min(1,1) - 0 = 1 unit of water trapped
+*/

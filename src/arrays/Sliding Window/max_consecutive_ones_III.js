@@ -26,3 +26,31 @@ function longestOnes(nums, k) {
 
     return maxLen;
 }
+
+/*
+1. Input:  nums = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], k = 2
+
+   Output: 6
+
+   Explanation: Flip the two 0s at indices 5 and 10.
+   Window [0,0,0,1,1,1,1,0] → flip indices 5 and 10 → 6 consecutive 1s from index 5 to 10.
+
+2. Input:  nums = [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], k = 3
+
+   Output: 10
+
+   Explanation: Flip 3 zeros in the best window to get 10 consecutive 1s.
+
+3. Input:  nums = [1, 1, 1], k = 0
+
+   Output: 3
+
+   Explanation: No flips needed — all are already 1s. Window spans the whole array.
+
+❌ Wrong input & output
+
+4. Input:  nums = [0, 0, 0], k = 1
+
+   Wrong output: 3   // ❌ can only flip 1 zero, not all 3
+   Correct output: 1  // ✅ best window has 1 flipped zero → length 1
+*/

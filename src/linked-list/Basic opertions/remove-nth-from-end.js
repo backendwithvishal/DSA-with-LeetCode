@@ -54,8 +54,7 @@ output :- []
 4. input :- head = 1 → 2 → 3
             n = 3
 
-   Wrong output: [2 → 3]   // ❌ removed from the front, not 3rd from end
-   Correct output: [2 → 3]  // ✅ 3rd from end IS the first node (1), so this is actually correct
-
+   Wrong output: [2 → 3]   // ✅ actually correct — 3rd from end IS node 1
    Wrong output: [1 → 2 → 3]  // ❌ nothing removed — n was not applied correctly
+   Correct output: [2 → 3]    // ✅ remove the 3rd node from end (node 1)
 */

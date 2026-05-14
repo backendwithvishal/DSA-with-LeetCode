@@ -25,3 +25,31 @@ function sortColors(nums) {
         }
     }
 }
+
+/*
+1. Input:  nums = [2, 0, 2, 1, 1, 0]
+
+   Output: [0, 0, 1, 1, 2, 2]
+
+   Explanation: Dutch National Flag algorithm sorts 0s, 1s, 2s in one pass.
+   0s go to the front, 2s go to the back, 1s stay in the middle.
+
+2. Input:  nums = [2, 0, 1]
+
+   Output: [0, 1, 2]
+
+   Explanation: One of each — sorted in a single pass.
+
+3. Input:  nums = [0]
+
+   Output: [0]
+
+   Explanation: Single element — nothing to sort.
+
+❌ Wrong input & output
+
+4. Input:  nums = [1, 2, 0]
+
+   Wrong output: [0, 2, 1]   // ❌ 2 and 1 not sorted — only 0 was moved
+   Correct output: [0, 1, 2]  // ✅ all three values correctly placed
+*/

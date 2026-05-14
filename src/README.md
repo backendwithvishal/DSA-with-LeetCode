@@ -11,17 +11,10 @@ src/
 ├── two-pointers/
 │   ├── two-sum-ii.js                        (LC 167) Two Sum II — detailed
 │   ├── two-sum-ii-simplified.js             (LC 167) Two Sum II — simplified
-│   ├── three-sum.js                         (LC 15)  3Sum
-│   ├── valid-palindrome-ii.js               (LC 680) Valid Palindrome II
-│   ├── reverse-string.js                    (LC 344) Reverse String
-│   └── valid-palindrome.js                  (LC 125) Valid Palindrome
+│   └── three-sum.js                         (LC 15)  3Sum
 │
 ├── sliding-window/
-│   ├── k-distinct-subarrays.js              (LC 992) Subarrays with K Distinct Integers
-│   ├── permutation-in-string.js             (LC 567) Permutation in String
-│   ├── minimum-window-substring.js          (LC 76)  Minimum Window Substring
-│   ├── longest-substring-no-repeat.js       (LC 3)   Longest Substring Without Repeating Characters
-│   └── find-all-anagrams.js                 (LC 438) Find All Anagrams in a String
+│   └── k-distinct-subarrays.js              (LC 992) Subarrays with K Distinct Integers
 │
 ├── binary-search/
 │   ├── binary-search-classic.js             (LC 704) Binary Search
@@ -66,9 +59,16 @@ src/
 │   ├── maximal-rectangle.js                 (LC 85)  Maximal Rectangle
 │   └── implement-queue-using-stacks.js      (LC 232) Implement Queue using Stacks
 │
-├── expand-from-center/
-│   ├── count-palindromic-substrings.js      (LC 647) Palindromic Substrings
-│   └── longest-palindromic-substring.js     (LC 5)   Longest Palindromic Substring
+├── strings/
+│   ├── valid-palindrome.js                  (LC 125) Valid Palindrome
+│   ├── valid-palindrome-ii.js               (LC 680) Valid Palindrome II
+│   ├── reverse-string.js                    (LC 344) Reverse String
+│   ├── longest-substring-no-repeat.js       (LC 3)   Longest Substring Without Repeating Characters
+│   ├── permutation-in-string.js             (LC 567) Permutation in String
+│   ├── minimum-window-substring.js          (LC 76)  Minimum Window Substring
+│   ├── find-all-anagrams.js                 (LC 438) Find All Anagrams in a String
+│   ├── longest-palindromic-substring.js     (LC 5)   Longest Palindromic Substring
+│   └── count-palindromic-substrings.js      (LC 647) Palindromic Substrings
 │
 ├── prefix-sum/
 │   └── subarray-sum-equals-k.js             (LC 560) Subarray Sum Equals K
@@ -83,11 +83,11 @@ src/
 
 | Technique             | Problems                                                                 |
 |-----------------------|--------------------------------------------------------------------------|
-| Two Pointers          | Two Sum II, 3Sum, Valid Palindrome I & II, Reverse String                |
-| Sliding Window        | K Distinct Subarrays, Permutation in String, Min Window Substring, Longest Substring, Find Anagrams |
+| Two Pointers          | Two Sum II, 3Sum                                                         |
+| Sliding Window        | K Distinct Subarrays                                                     |
 | Binary Search         | Classic, Rotated Array, First/Last Position, Peak Element, Min Rotated, Split Array, Bouquets, Magnetic Force |
 | Linked List           | Reverse, Merge Two Sorted, Cycle I & II, Middle, Remove Duplicates, Odd/Even, Remove Nth, Swap Pairs, Reverse k-Group, Rotate, Palindrome, Reorder, Sort, Twin Sum, Add Two Numbers I & II, Remove Nodes, Reverse Between, Next Larger, Merge K |
 | Stack & Queue         | Next Greater II, Evaluate RPN, Stack via Queue, Custom Stack, Min Stack, Maximal Rectangle, Queue via Stacks |
-| Expand from Center    | Count Palindromic Substrings, Longest Palindromic Substring              |
+| Strings               | Valid Palindrome I & II, Reverse String, Longest Substring No Repeat, Permutation in String, Min Window Substring, Find Anagrams, Longest Palindromic Substring, Count Palindromic Substrings |
 | Prefix Sum            | Subarray Sum Equals K                                                    |
 | Arrays                | Rotate Array                                                             |

@@ -6,7 +6,7 @@ function maxSlidingWindow(nums, k) {
 
     for (let right = 0; right < nums.length; right++) {
 
-        // STEP 1: remove expired index from front
+        //  1: remove expired index from front
         // if front index is outside current window [right - k+1 ... right]
         if (deque.length > 0 && deque[0] < right - k + 1) {
             deque.shift(); // front element has left the window

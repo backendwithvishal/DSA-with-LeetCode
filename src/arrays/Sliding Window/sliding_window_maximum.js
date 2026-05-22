@@ -21,7 +21,7 @@ function maxSlidingWindow(nums, k) {
         // 3: add current index to back of deque
         deque.push(right);
 
-        // STEP 4: record max once first full window is formed
+        // 4: record max once first full window is formed
         if (right >= k - 1) {
             result.push(nums[deque[0]]); // front of deque = index of max in window
         }

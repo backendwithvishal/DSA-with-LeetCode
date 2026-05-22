@@ -12,7 +12,7 @@ function maxSlidingWindow(nums, k) {
             deque.shift(); // front element has left the window
         }
 
-        // STEP 2: remove useless indices from back
+        // 2: remove useless indices from back
         // if back element's value <= current value → it will never be max → remove it
         while (deque.length > 0 && nums[deque[deque.length - 1]] <= nums[right]) {
             deque.pop(); // remove smaller/equal old elements from back

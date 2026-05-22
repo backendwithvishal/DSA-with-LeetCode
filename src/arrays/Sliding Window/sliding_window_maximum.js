@@ -18,7 +18,7 @@ function maxSlidingWindow(nums, k) {
             deque.pop(); // remove smaller/equal old elements from back
         }
 
-        // STEP 3: add current index to back of deque
+        // 3: add current index to back of deque
         deque.push(right);
 
         // STEP 4: record max once first full window is formed

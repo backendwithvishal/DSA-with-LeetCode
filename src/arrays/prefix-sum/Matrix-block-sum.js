@@ -11,9 +11,9 @@ function matrixBlockSum(mat, k) {
   for (let i = 1; i <= m; i++) {
     for (let j = 1; j <= n; j++) {
       prefix[i][j] = mat[i - 1][j - 1]   // current cell
-                   + prefix[i - 1][j]     // sum above
-                   + prefix[i][j - 1]     // sum to the left
-                   - prefix[i - 1][j - 1];// remove double-counted top-left
+        + prefix[i - 1][j]     // sum above
+        + prefix[i][j - 1]     // sum to the left
+        - prefix[i - 1][j - 1];// remove double-counted top-left
     }
   }
 
@@ -33,9 +33,9 @@ function matrixBlockSum(mat, k) {
 
       // Rectangle sum using inclusion-exclusion on prefix table
       answer[i][j] = prefix[r2 + 1][c2 + 1]   // full rectangle
-                   - prefix[r1][c2 + 1]         // remove top strip
-                   - prefix[r2 + 1][c1]         // remove left strip
-                   + prefix[r1][c1];            // add back double-subtracted corner
+        - prefix[r1][c2 + 1]         // remove top strip
+        - prefix[r2 + 1][c1]         // remove left strip
+        + prefix[r1][c1];            // add back double-subtracted corner
     }
   }
 

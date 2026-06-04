@@ -1,34 +1,24 @@
-// 238 question on leetcode 
+var productExceptSelf = function(nums) {
+    // Get the size of the array
+    const n = nums.length;
 
-function productExceptSelf(nums) {
-  const n = nums.length;
-  const answer = new Array(n).fill(1);
+    // Create a result array and fill it with 1s
+    const answer = new Array(n).fill(1);
 
-  // ── Pass 1: Fill answer[] with prefix products ──────────────────────────
-  // answer[i] = product of all elements to the LEFT of index i
-  // Start with 1 (no elements to the left of index 0)
+    // Store the product of all numbers on the left side
+    let leftProduct = 1;
+    for (let i = 0; i < n; i++) {
+        answer[i] = leftProduct; // Save left-side product
+        leftProduct *= nums[i];  // Update left-side product
+    }
 
-  let leftProduct = 1;
-  for (let i = 0; i < n; i++) {
-    answer[i] = leftProduct;       // store product of everything left of i
-    leftProduct *= nums[i];        // update for next index
-  }
+    // Store the product of all numbers on the right side
+    let rightProduct = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        answer[i] *= rightProduct; // Multiply by right-side product
+        rightProduct *= nums[i];   // Update right-side product
+    }
 
-  // After pass 1:
-  // answer = [1, 1, 2, 6]  for nums = [1, 2, 3, 4]
-
-  // ── Pass 2: Multiply answer[] with suffix products ───────────────────────
-  // Traverse from RIGHT to LEFT
-  // rightProduct holds product of all elements to the RIGHT of index i
-
-  let rightProduct = 1;
-  for (let i = n - 1; i >= 0; i--) {
-    answer[i] *= rightProduct;     // combine prefix (already stored) × suffix
-    rightProduct *= nums[i];       // update for next index (going left)
-  }
-
-  // After pass 2:
-  // answer = [24, 12, 8, 6]  ✅
-
-  return answer;
-}
+    // Return the final result
+    return answer;
+};

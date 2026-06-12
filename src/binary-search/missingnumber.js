@@ -1,4 +1,5 @@
 // 268 question on Leetcode 
+
 var missingNumber = function(nums) {
     // Start with n because numbers should be from 0 to n
     let result = nums.length;
